@@ -24,9 +24,9 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-white">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-lg">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-lg">
         <div className="container mx-auto px-4">
           <nav className="flex h-14 items-center justify-between">
             <div className="flex items-center gap-2">
@@ -290,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* Services Grid */}
-      <section className="bg-neutral-50 px-4 py-16 md:py-20">
+      <section className="bg-card px-4 py-16 md:py-20">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <Badge variant="outline" className="mb-4">
@@ -474,7 +474,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Section */}
-      <section className="bg-neutral-50 px-4 py-16 md:py-20">
+      <section className="bg-card px-4 py-16 md:py-20">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <Badge variant="outline" className="mb-4">
