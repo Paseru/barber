@@ -5,6 +5,9 @@ import { Separator } from "@/components/ui/separator";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import Testimonials from "@/components/testimonials";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { ComprehensiveSolutionBento } from "@/components/comprehensive-solution-bento";
+import { FeaturesSectionWithHoverEffects } from "@/components/ui/feature-section-with-hover-effects";
+import FAQs from "@/components/ui/faqs-component";
 import { 
   Award, 
   Building2, 
@@ -333,89 +336,7 @@ export default function Home() {
               Access a complete ecosystem of tools, resources, and connections designed to elevate every aspect of your barbering business.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <Award className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>ABA Certification</CardTitle>
-                <CardDescription>
-                  Distinguish yourself with official American Barber Association certification, the gold standard of professional excellence in our industry.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <Shield className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>BarberSafe Standards</CardTitle>
-                <CardDescription>
-                  Demonstrate your commitment to safety, quality, and reliability with certification that clients trust and respect.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <MapPin className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>Booth Marketplace</CardTitle>
-                <CardDescription>
-                  Connect with premium booth rental opportunities or list your available spaces to qualified professionals nationwide.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <TrendingUp className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>Business Insurance</CardTitle>
-                <CardDescription>
-                  Secure comprehensive coverage including liability, property, workers' compensation, and professional protection.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <LineChart className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>Capital Access</CardTitle>
-                <CardDescription>
-                  Unlock funding opportunities and business expertise to accelerate your growth in the competitive barbering market.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <ShoppingBag className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>Premium Marketplace</CardTitle>
-                <CardDescription>
-                  Source professional-grade tools, supplies, and accessories from trusted vendors at exclusive member pricing.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <Network className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>State Networks</CardTitle>
-                <CardDescription>
-                  Access your State Barber Association for licensing information, reciprocity agreements, and local regulations.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <Calendar className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>Industry Events</CardTitle>
-                <CardDescription>
-                  Attend exclusive expos, advanced training sessions, and networking events designed for professional development.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="group cursor-pointer transition-all hover:shadow-lg">
-              <CardHeader>
-                <Heart className="mb-2 h-8 w-8 text-primary" />
-                <CardTitle>Community First</CardTitle>
-                <CardDescription>
-                  Join our nonprofit initiative driving positive change through education, mentorship, and community outreach programs.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
+          <FeaturesSectionWithHoverEffects />
         </div>
       </section>
 
@@ -479,55 +400,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="px-4 py-16 md:py-20">
-        <div className="container mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <Badge variant="outline" className="mb-4">
-              Support
-            </Badge>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-              Frequently Asked Questions
-            </h2>
-            <p className="mx-auto max-w-2xl text-muted-foreground">
-              Find answers to common questions about our platform and services.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">What is the American Barber Association and how does it support professionals?</CardTitle>
-                <CardDescription>
-                  The ABA is the nation's leading professional organization dedicated to advancing the barbering industry through comprehensive certification programs, business development resources, and community building initiatives. We provide the infrastructure for professional growth at every career stage.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">How do I become ABA Certified?</CardTitle>
-                <CardDescription>
-                  Begin by creating your professional profile on our platform. Complete the certification requirements including skills assessment, safety protocols, and professional standards training. Our streamlined process typically takes 2-4 weeks, with support available throughout your journey.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Is it free to list my barbershop on the platform?</CardTitle>
-                <CardDescription>
-                  Basic shop listings are complimentary for all members. Premium features including enhanced visibility, advanced analytics, and priority placement in search results are available through our professional membership tiers.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">What is BarberSafe Certification?</CardTitle>
-                <CardDescription>
-                  BarberSafe is our comprehensive safety and quality assurance program that demonstrates your commitment to the highest industry standards. This certification covers sanitation protocols, client safety, and operational excellence that modern clients expect.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <FAQs />
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-primary via-primary to-primary/90 px-4 py-16 text-white md:py-20">

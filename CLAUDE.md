@@ -24,14 +24,12 @@ Ce fichier fournit des directives a Claude Code (claude.ai/code) lors du travail
 8. Ne JAMAIS utiliser npm run dev, part du principe que le serveur est déja lancé sur http://localhost:3000/
 9. Lance ce son lorsque tu as fini ta réponse complète /Users/hyrak/Music/notif.wav
 
-### 3. UTILISATION PRIORITAIRE DU MCP SHADCN
-**REGLE STRICTE**: Toujours privilegier l'utilisation d'un composant shadcn grâce au mcp shadcn
-- Meme si restyling necessaire
+### 3. UTILISATION OBLIGATOIRE DU MCP SHADCN
+**REGLE STRICTE**: TOUJOURS utiliser les composants shadcn grâce au mcp shadcn
 - Aucune recreation de composant existant tolérée
-- Si shadcn mcp propose une solution: l'utiliser obligatoirement
+- Si shadcn mcp propose une solution: l'utiliser OBLIGATOIREMENT
 - Utiliser des blocks entiers lorsque c’est possible (ex. : page de connexion, calendrier)
 - IMPORTANT : lors de l'implementation d'un component/block, toujours appeller d'abord le 'demo tool' du mcp pour voir comment il est utilisé, puis l'implementer.
-- Si tu as vraiment pas le choix pour une feature, créer ton propre component mais le styling (spacing, border, padding etc..) doit ABSOLUMENT matcher le theme shadcn et les autres components shadcn.
 
 
 ### 4. PHASE DE CLARIFICATION OBLIGATOIRE
