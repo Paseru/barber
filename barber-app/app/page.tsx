@@ -1,26 +1,20 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import Testimonials from "@/components/testimonials";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { ComprehensiveSolutionBento } from "@/components/comprehensive-solution-bento";
 import { FeaturesSectionWithHoverEffects } from "@/components/ui/feature-section-with-hover-effects";
 import FAQs from "@/components/ui/faqs-component";
 import { 
   Award, 
   Building2, 
-  Calendar, 
   ChevronRight, 
   GraduationCap, 
   Heart, 
-  LineChart, 
-  MapPin, 
   Network, 
   Scissors, 
-  Shield, 
-  ShoppingBag, 
   Sparkles, 
   TrendingUp, 
   Users, 
@@ -212,7 +206,7 @@ export default function Home() {
             <BlurFade delay={0.1} inView>
               <Badge variant="secondary" className="mb-3 bg-white/10 text-white backdrop-blur text-xs">
                 <Sparkles className="mr-1 h-2.5 w-2.5" />
-                America's Leading Barbering Platform
+                America&apos;s Leading Barbering Platform
               </Badge>
             </BlurFade>
             <BlurFade delay={0.2} inView>
@@ -413,7 +407,7 @@ export default function Home() {
             Ready to Transform Your Barbering Career?
           </h2>
           <p className="mb-8 text-lg text-white/90">
-            Join thousands of professionals already growing with America's premier barbering platform.
+            Join thousands of professionals already growing with America&apos;s premier barbering platform.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" variant="secondary" className="min-w-[200px]">

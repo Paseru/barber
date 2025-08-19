@@ -2,7 +2,6 @@
 import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
 import { Badge } from "@/components/ui/badge";
 import { Users } from "lucide-react";
-import { motion } from "motion/react";
 
 const testimonials = [
   {
