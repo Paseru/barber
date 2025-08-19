@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import Testimonials from "@/components/testimonials";
+import { BlurFade } from "@/components/ui/blur-fade";
 import { 
   Award, 
   Building2, 
@@ -184,45 +186,69 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 px-4 py-20 text-white md:py-28">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div className="container relative mx-auto max-w-6xl">
+      <section className="relative overflow-hidden px-3 py-17 text-white md:py-24" style={{transform: 'scale(0.85)', transformOrigin: 'top center'}}>
+        {/* Background Image with Smoky Black Overlay */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url(./pexels-zvolskiy-1570807.jpg)',
+              backgroundAttachment: 'fixed'
+            }}
+          ></div>
+          {/* Dark smoky overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/90"></div>
+          {/* Additional smoky effect */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
+        </div>
+        
+        <div className="container relative mx-auto max-w-5xl">
           <div className="flex flex-col items-center text-center">
-            <Badge variant="secondary" className="mb-4 bg-white/10 text-white backdrop-blur">
-              <Sparkles className="mr-1 h-3 w-3" />
-              America's Leading Barbering Platform
-            </Badge>
-            <h1 className="mb-6 bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-4xl font-bold tracking-tight text-transparent md:text-6xl lg:text-7xl">
-              Transforming the Future
-              <br />
-              of Professional Barbering
-            </h1>
-            <p className="mb-8 max-w-2xl text-lg text-neutral-300 md:text-xl">
-              Elevate your craft with industry-recognized certifications, expand your business through strategic connections, and join a thriving community of professionals shaping the barbering landscape.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Button size="lg" className="bg-white text-neutral-900 hover:bg-neutral-100">
-                Start Your Journey
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white/20 bg-white/10 text-white backdrop-blur hover:bg-white/20">
-                Explore Platform
-              </Button>
-            </div>
-            <div className="mt-12 grid grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold md:text-4xl">10,000+</div>
-                <div className="text-sm text-neutral-400">Certified Professionals</div>
+            <BlurFade delay={0.1} inView>
+              <Badge variant="secondary" className="mb-3 bg-white/10 text-white backdrop-blur text-xs">
+                <Sparkles className="mr-1 h-2.5 w-2.5" />
+                America's Leading Barbering Platform
+              </Badge>
+            </BlurFade>
+            <BlurFade delay={0.2} inView>
+              <h1 className="mb-5 bg-gradient-to-b from-white to-neutral-300 bg-clip-text text-3xl font-bold tracking-tight text-transparent md:text-5xl lg:text-6xl">
+                Transforming the Future
+                <br />
+                of Professional Barbering
+              </h1>
+            </BlurFade>
+            <BlurFade delay={0.3} inView>
+              <p className="mb-7 max-w-xl text-base text-neutral-200 md:text-lg">
+                Elevate your craft with industry-recognized certifications, expand your business through strategic connections, and join a thriving community of professionals shaping the barbering landscape.
+              </p>
+            </BlurFade>
+            <BlurFade delay={0.4} inView>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button size="lg" className="bg-white text-neutral-900 hover:bg-neutral-100 text-sm px-6 py-2.5">
+                  Start Your Journey
+                  <ChevronRight className="ml-2 h-3.5 w-3.5" />
+                </Button>
+                <Button size="lg" variant="outline" className="border-white/20 bg-white/10 text-white backdrop-blur hover:bg-white/20 text-sm px-6 py-2.5">
+                  Explore Platform
+                </Button>
               </div>
-              <div>
-                <div className="text-3xl font-bold md:text-4xl">50</div>
-                <div className="text-sm text-neutral-400">States Represented</div>
+            </BlurFade>
+            <BlurFade delay={0.5} inView>
+              <div className="mt-10 grid grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-2xl font-bold md:text-3xl">10,000+</div>
+                  <div className="text-xs text-neutral-300">Certified Professionals</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold md:text-3xl">50</div>
+                  <div className="text-xs text-neutral-300">States Represented</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold md:text-3xl">95%</div>
+                  <div className="text-xs text-neutral-300">Member Satisfaction</div>
+                </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold md:text-4xl">95%</div>
-                <div className="text-sm text-neutral-400">Member Satisfaction</div>
-              </div>
-            </div>
+            </BlurFade>
           </div>
         </div>
       </section>
@@ -391,87 +417,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="px-4 py-16 md:py-20">
-        <div className="container mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <Badge variant="outline" className="mb-4">
-              <Users className="mr-1 h-3 w-3" />
-              Trusted Nationwide
-            </Badge>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-              Success Stories from Our Community
-            </h2>
-            <p className="mx-auto max-w-2xl text-muted-foreground">
-              Join thousands of professionals who have transformed their careers through our platform.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            <Card>
-              <CardHeader>
-                <div className="mb-2 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Sparkles key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <CardDescription>
-                  "Barbers World revolutionized how I manage my business operations and connect with high-value clients. The certification program alone has increased my bookings by 40%."
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-neutral-200"></div>
-                  <div>
-                    <div className="font-semibold">James Wilson</div>
-                    <div className="text-sm text-muted-foreground">Master Barber, NYC</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <div className="mb-2 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Sparkles key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <CardDescription>
-                  "The certification tracking and booth management features are absolute game-changers. I've streamlined operations across three locations and reduced vacancy rates to near zero."
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-neutral-200"></div>
-                  <div>
-                    <div className="font-semibold">Sarah Chen</div>
-                    <div className="text-sm text-muted-foreground">Shop Owner, LA</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <div className="mb-2 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Sparkles key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <CardDescription>
-                  "Found my dream booth location and doubled my client base through the platform's networking features. The business resources helped me transition from employee to entrepreneur."
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-neutral-200"></div>
-                  <div>
-                    <div className="font-semibold">Marcus Rodriguez</div>
-                    <div className="text-sm text-muted-foreground">Independent Barber, Miami</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       {/* Why Choose Section */}
       <section className="bg-card px-4 py-16 md:py-20">
