@@ -186,14 +186,15 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-3 py-17 text-white md:py-24" style={{transform: 'scale(0.85)', transformOrigin: 'top center'}}>
+      <section className="relative w-full overflow-hidden bg-black text-white">
         {/* Background Image with Smoky Black Overlay */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="h-full w-full bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: 'url(./pexels-zvolskiy-1570807.jpg)',
-              backgroundAttachment: 'fixed'
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
             }}
           ></div>
           {/* Dark smoky overlay */}
@@ -202,8 +203,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
         </div>
         
-        <div className="container relative mx-auto max-w-5xl">
-          <div className="flex flex-col items-center text-center">
+        <div className="relative z-10 w-full py-20 md:py-28 lg:py-32">
+          <div className="container mx-auto max-w-5xl px-4">
+            <div className="flex flex-col items-center text-center">
             <BlurFade delay={0.1} inView>
               <Badge variant="secondary" className="mb-3 bg-white/10 text-white backdrop-blur text-xs">
                 <Sparkles className="mr-1 h-2.5 w-2.5" />
@@ -249,6 +251,7 @@ export default function Home() {
                 </div>
               </div>
             </BlurFade>
+            </div>
           </div>
         </div>
       </section>
